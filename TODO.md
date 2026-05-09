@@ -1,26 +1,26 @@
 # TODO - 骗了吗 Implementation Tasks
 
 ## Phase 1: Project Initialization
-- [ ] Initialize Next.js 14 with App Router and TypeScript
-- [ ] Configure Tailwind CSS
-- [ ] Set up project structure (`app/`, `components/`, `lib/`, `types/`, `data/`)
-- [ ] Create type definitions (`types/index.ts`)
-- [ ] Add seed data (`data/seed.ts`) with 5-10 sample scams
-- [ ] Write unit tests for types and seed data
-- [ ] **Commit after Phase 1**
+- [x] Initialize Next.js 14 with App Router and TypeScript
+- [x] Configure Tailwind CSS
+- [x] Set up project structure (`app/`, `components/`, `lib/`, `types/`, `data/`)
+- [x] Create type definitions (`types/index.ts`)
+- [x] Add seed data (`data/seed.ts`) with 5-10 sample scams
+- [x] Write unit tests for types and seed data
+- [x] **Commit after Phase 1**
 
 ## Phase 2: Static Data Layer
-- [ ] Create `lib/data.ts` to expose seed data
-- [ ] Build `SearchBar.tsx` component
-- [ ] Build `CategoryGrid.tsx` component (10 categories)
-- [ ] Build `HotScams.tsx` component
-- [ ] Build `TagCloud.tsx` component
-- [ ] Build homepage (`app/page.tsx`)
-- [ ] Build category browsing (`app/category/[slug]/page.tsx`)
-- [ ] Build scam detail page (`app/scam/[slug]/page.tsx`) with `RedFlagTable.tsx`
-- [ ] Build search results page (`app/search/page.tsx`)
-- [ ] Write unit tests for components and data utilities
-- [ ] **Commit after Phase 2**
+- [x] Create `lib/data.ts` to expose seed data
+- [x] Build `SearchBar.tsx` component
+- [x] Build `CategoryGrid.tsx` component (10 categories)
+- [x] Build `HotScams.tsx` component
+- [x] Build `TagCloud.tsx` component
+- [x] Build homepage (`app/page.tsx`)
+- [x] Build category browsing (`app/category/[slug]/page.tsx`)
+- [x] Build scam detail page (`app/scam/[slug]/page.tsx`) with `RedFlagTable.tsx`
+- [x] Build search results page (`app/search/page.tsx`)
+- [x] Write unit tests for components and data utilities
+- [x] **Commit after Phase 2**
 
 ## Phase 3: Search Functionality
 - [ ] Implement `lib/search.ts` with keyword matching
@@ -58,21 +58,22 @@
 
 ## Components Checklist
 
-- [ ] `SearchBar.tsx`
-- [ ] `CategoryGrid.tsx`
-- [ ] `ScamCard.tsx`
-- [ ] `RedFlagTable.tsx`
-- [ ] `HotScams.tsx`
-- [ ] `TagCloud.tsx`
-- [ ] `CaseList.tsx`
-- [ ] `ShareButtons.tsx`
-- [ ] `ContributeForm.tsx`
+- [x] `SearchBar.tsx`
+- [x] `CategoryGrid.tsx`
+- [x] `ScamCard.tsx`
+- [x] `RedFlagTable.tsx`
+- [x] `HotScams.tsx`
+- [x] `TagCloud.tsx`
+- [x] `CaseList.tsx`
+- [x] `ShareButtons.tsx`
+- [x] `ContributeForm.tsx`
 
 ---
 
 ## Testing Requirements
-- [ ] Unit tests for types (`types/index.ts`)
-- [ ] Unit tests for seed data (`data/seed.ts`)
+- [x] Unit tests for types (`types/index.ts`)
+- [x] Unit tests for seed data (`data/seed.ts`)
+- [x] Unit tests for lib/data.ts
 - [ ] Unit tests for search logic (`lib/search.ts`)
 - [ ] Unit tests for contribution form validation
 - [ ] Integration tests for API routes
