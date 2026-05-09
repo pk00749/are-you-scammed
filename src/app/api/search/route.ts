@@ -34,6 +34,9 @@ export async function GET(request: NextRequest) {
   const sort = searchParams.get('sort') as SearchOptions['sortBy'] || 'relevance';
   const tag = searchParams.get('tag');
 
+  // Decode URI component for Chinese characters
+  const decodedQuery = decodeURIComponent(query);
+
   let allScams: Scam[] = [];
 
   // Try Supabase first if configured
@@ -78,7 +81,7 @@ export async function GET(request: NextRequest) {
 
   // Search and sort
   const options: SearchOptions = {
-    query,
+    query: decodedQuery,
     sortBy: sort as SearchOptions['sortBy'],
   };
 
