@@ -1,11 +1,12 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import { Send } from 'lucide-react';
+import { Send, AlertCircle } from 'lucide-react';
 import { categories } from '@/data/seed';
+import { validateContribution } from '@/lib/contributions';
 
 interface ContributeFormProps {
-  onSubmit?: (data: ContributeFormData) => void;
+  onSubmitSuccess?: () => void;
 }
 
 export interface ContributeFormData {
@@ -15,7 +16,7 @@ export interface ContributeFormData {
   description?: string;
 }
 
-export default function ContributeForm({ onSubmit }: ContributeFormProps) {
+export default function ContributeForm({ onSubmitSuccess }: ContributeFormProps) {
   const [formData, setFormData] = useState<ContributeFormData>({
     category: '',
     scripts: '',
@@ -24,20 +25,39 @@ export default function ContributeForm({ onSubmit }: ContributeFormProps) {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errors, setErrors] = useState<string[]>([]);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setErrors([]);
 
-    // Simulate submission delay
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    if (onSubmit) {
-      onSubmit(formData);
+    // Validate
+    const validation = validateContribution(formData);
+    if (!validation.valid) {
+      setErrors(validation.errors);
+      return;
     }
 
-    setIsSubmitting(false);
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch('/api/contribute', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error('提交失败');
+      }
+
+      setSubmitted(true);
+      onSubmitSuccess?.();
+    } catch (err) {
+      setErrors(['提交失败，请稍后重试']);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -51,6 +71,19 @@ export default function ContributeForm({ onSubmit }: ContributeFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      {errors.length > 0 && (
+        <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
+          <div className="flex items-start gap-2">
+            <AlertCircle className="w-5 h-5 text-red-600 mt-0.5" />
+            <ul className="text-sm text-red-700 space-y-1">
+              {errors.map((err, idx) => (
+                <li key={idx}>{err}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
+
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">
           * 骗局类型

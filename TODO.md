@@ -23,12 +23,12 @@
 - [x] **Commit after Phase 2**
 
 ## Phase 3: Search Functionality
-- [ ] Implement `lib/search.ts` with keyword matching
-- [ ] Add search highlighting
-- [ ] Build search results page with sorting (热度/最新/相关度)
-- [ ] Handle "no results" case with contribute CTA
-- [ ] Write unit tests for search logic
-- [ ] **Commit after Phase 3**
+- [x] Implement `lib/search.ts` with keyword matching
+- [x] Add search highlighting
+- [x] Build search results page with sorting (热度/最新/相关度)
+- [x] Handle "no results" case with contribute CTA
+- [x] Write unit tests for search logic
+- [x] **Commit after Phase 3**
 
 ## Phase 4: Contribution System
 - [ ] Build `ContributeForm.tsx` component
@@ -38,13 +38,13 @@
 - [ ] Write unit tests for form validation
 - [ ] **Commit after Phase 4**
 
-## Phase 5: API Routes
-- [ ] Create `app/api/scams/route.ts` (GET all, GET by slug)
-- [ ] Create `app/api/search/route.ts` (GET search)
-- [ ] Create `app/api/contribute/route.ts` (POST submission)
-- [ ] Wire up components to use API routes
+## Phase 5: API Routes (Completed in Phase 3)
+- [x] Create `app/api/scams/route.ts` (GET all, GET by slug)
+- [x] Create `app/api/search/route.ts` (GET search)
+- [x] Create `app/api/contribute/route.ts` (POST submission)
+- [x] Wire up components to use API routes
 - [ ] Write integration tests for API routes
-- [ ] **Commit after Phase 5**
+- [x] **Commit after Phase 3**
 
 ## Phase 6: Supabase Integration (Optional for V1)
 - [ ] Configure Supabase client (`lib/supabase.ts`)
@@ -74,7 +74,7 @@
 - [x] Unit tests for types (`types/index.ts`)
 - [x] Unit tests for seed data (`data/seed.ts`)
 - [x] Unit tests for lib/data.ts
-- [ ] Unit tests for search logic (`lib/search.ts`)
+- [x] Unit tests for search logic (`lib/search.ts`)
 - [ ] Unit tests for contribution form validation
 - [ ] Integration tests for API routes
 - [ ] Component render tests
