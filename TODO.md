@@ -31,12 +31,12 @@
 - [x] **Commit after Phase 3**
 
 ## Phase 4: Contribution System
-- [ ] Build `ContributeForm.tsx` component
-- [ ] Create `app/contribute/page.tsx`
-- [ ] Create `lib/contributions.ts` for storing submissions
-- [ ] Add "投稿须知" section
-- [ ] Write unit tests for form validation
-- [ ] **Commit after Phase 4**
+- [x] Build `ContributeForm.tsx` component
+- [x] Create `app/contribute/page.tsx`
+- [x] Create `lib/contributions.ts` for storing submissions
+- [x] Add "投稿须知" section
+- [x] Write unit tests for form validation
+- [x] **Commit after Phase 4**
 
 ## Phase 5: API Routes (Completed in Phase 3)
 - [x] Create `app/api/scams/route.ts` (GET all, GET by slug)
@@ -75,6 +75,6 @@
 - [x] Unit tests for seed data (`data/seed.ts`)
 - [x] Unit tests for lib/data.ts
 - [x] Unit tests for search logic (`lib/search.ts`)
-- [ ] Unit tests for contribution form validation
+- [x] Unit tests for contribution form validation (`lib/contributions.ts`)
 - [ ] Integration tests for API routes
 - [ ] Component render tests
