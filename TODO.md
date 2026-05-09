@@ -47,12 +47,12 @@
 - [x] **Commit after Phase 3**
 
 ## Phase 6: Supabase Integration (Optional for V1)
-- [ ] Configure Supabase client (`lib/supabase.ts`)
-- [ ] Create database tables (scams, contributions)
-- [ ] Migrate seed data to Supabase
-- [ ] Update API routes to use Supabase
-- [ ] Write tests for database operations
-- [ ] **Commit after Phase 6**
+- [x] Configure Supabase client (`lib/supabase.ts`)
+- [x] Create database tables (scams, contributions)
+- [x] Migrate seed data to Supabase
+- [x] Update API routes to use Supabase
+- [x] Write tests for database operations
+- [x] **Commit after Phase 6**
 
 ---
 
