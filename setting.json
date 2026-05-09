@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Bash(git log:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(kubectl get:*)",
+      "Bash(kubectl describe:*)",
+      "Bash(kubectl logs:*)",
+      "Bash(docker ps:*)",
+      "Bash(docker logs:*)",
+      "Bash(curl -s http://localhost:*)",
+      "Bash(psql * -c \"SELECT:*\")"
+    ],
+    "ask": [
+      "Edit",
+      "Write",
+      "Bash"
+    ],
+    "deny": [
+      "Bash(rm:*)",
+      "Bash(git push:*)",
+      "Bash(kubectl delete:*)",
+      "Bash(kubectl apply:*)",
+      "Bash(docker rm:*)",
+      "Bash(psql * -c \"DROP:*\")",
+      "Bash(psql * -c \"DELETE:*\")",
+      "Bash(psql * -c \"UPDATE:*\")",
+      "Bash(psql * -c \"INSERT:*\")"
+    ]
+  }
+}
