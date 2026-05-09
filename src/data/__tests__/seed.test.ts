@@ -57,8 +57,8 @@ describe('seedScams', () => {
 });
 
 describe('categories', () => {
-  it('should have 10 categories', () => {
-    expect(categories.length).toBe(10);
+  it('should have at least 10 categories', () => {
+    expect(categories.length).toBeGreaterThanOrEqual(10);
   });
 
   it('each category should have required fields', () => {

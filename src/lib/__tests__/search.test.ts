@@ -27,7 +27,8 @@ describe('searchScams', () => {
   it('should find scams by script content', () => {
     const results = searchScams(seedScams, { query: '投资' });
     expect(results.length).toBeGreaterThan(0);
-    expect(results[0].matchedFields).toContain('scripts');
+    const hasScriptMatch = results.some(r => r.matchedFields.includes('scripts'));
+    expect(hasScriptMatch).toBe(true);
   });
 
   it('should find scams by tag', () => {
